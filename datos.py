@@ -4,13 +4,9 @@ import xml.etree.ElementTree as ET
 
 parser = ET.XMLParser(encoding='utf-8')
 
-#r1 = requests.get("https://data.tfl.gov.uk/tfl/syndication/feeds/stations-facilities.xml")
-r2 = requests.get("https://tfl.gov.uk/tfl/syndication/feeds/step-free-tube-guide.xml")
-r = r2.text
-#with open('datos/stations-facilities.xml', 'w') as f:
-#    f.write(r1.text)
+#stations = ET.parse('datos/stations-facilities.xml',parser)
+tube = ET.parse('datos/step-free-tube-guide.xml',parser)
 
-with open('datos/step-free-tube-guide.xml', 'w') as f1:
-   f1.write(r)
+#root = stations.getroot()
 
-stations = ET.parse('datos/stations-facilities.xml',parser)
+#print(root)
